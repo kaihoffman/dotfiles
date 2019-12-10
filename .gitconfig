@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+	email = 
+	name = 
+
+[alias]
+	cm = !git add -A && git commit -m
+	co = checkout
+	
+
+	#When starting new work, pull in and clean.
+	pullprep = pull --rebase --prune
+	#Checkout a new branch with name provided
+	cob = checkout -b
+	# Saves a savepoint for work in progress (credit to https://haacked.com/archive/2014/07/28/github-flow-aliases/)
+	save = !git add -A && git commit -m 'SAVEPOINT'
+
+	# An undo command to pair with save above - resets the commit but keeps the work for amending.
+	undo = reset HEAD~1 --mixed
+
+	# Nah - for when it's shit and you know it and just want rid.
+	nah = reset --hard && git clean -df
