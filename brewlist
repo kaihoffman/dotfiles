@@ -7,7 +7,10 @@ coreutils
 fd
 gdbm
 gettext
+helm
 hey
+k9s
+libevent
 libgpg-error
 libidn2
 libksba
@@ -16,6 +19,7 @@ libunistring
 libyaml
 mc
 mysql
+ncurses
 nmap
 octant
 openssl
@@ -25,6 +29,7 @@ python
 readline
 redis
 sqlite
+tmux
 travis
 v8
 wget
