@@ -39,6 +39,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 HISTFILESIZE=1000000
 HISTSIZE=1000
+HISTIGNORE="ls:ps:cd:history:top:htop"
 
 alias ll="ls -GFlh"
 alias find="fd"
