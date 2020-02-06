@@ -40,7 +40,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 HISTFILESIZE=1000000
 HISTSIZE=100000
 HISTIGNORE="ls:ps:cd:history:top:htop"
-export HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL=ignoreboth:erasedups
 
 alias ll="ls -GFlh"
 alias find="fd"
