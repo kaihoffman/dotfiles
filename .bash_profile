@@ -33,7 +33,7 @@ YELLOW="\[\e[1;33m\]"
 GREEN="\[\e[1;32m\]"
 
 PROMPT_DIRTRIM=2
-export PS1='\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)$(get_kubernetes_context)$ '
+export PS1='[\A]\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)$(get_kubernetes_context)$ '
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
