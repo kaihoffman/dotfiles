@@ -5,7 +5,6 @@ function window_title {
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export OPENFAAS_URL=http://185.136.234.68:31112
 
 # added by travis gem
 [ -f /Users/kai/.travis/travis.sh ] && source /Users/kai/.travis/travis.sh
