@@ -25,6 +25,15 @@ get_kubernetes_context()
  fi
 }
 
+# Bash loops as per Petrus Repo's (@pre) dotfiles. The first loops until interrupted, the second loops until a success exit code is provided.
+loop() {
+  while sleep 1; do eval "$@"; done
+}
+
+luup() {
+  while sleep 1; do eval "$@" && return; done
+}
+
 # Remove all colour attributes with 00m
 NORMAL="\[\033[00m\]"
 
