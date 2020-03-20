@@ -7,7 +7,6 @@
 	cm = !git add -A && git commit -m
 	co = checkout
 	
-
 	#When starting new work, pull in and clean.
 	pullprep = pull --rebase --prune
 	#Checkout a new branch with name provided
@@ -20,3 +19,7 @@
 
 	# Nah - for when it's shit and you know it and just want rid.
 	nah = reset --hard && git clean -df
+	
+	# Pretty log graph aliases as per https://stackoverflow.com/a/9074343/11825722
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
