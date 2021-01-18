@@ -5,9 +5,9 @@
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-GIT_SYMBOL="\xE2\x8E\x87"
+GIT_SYMBOL=$'\xE2\x8E\x87 '
 parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+ echo "$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(${GIT_SYMBOL} \1)/")"
 }
 
 # The following function is from Chris Vermeulen's guide, modified to not error when no context is present
@@ -33,6 +33,12 @@ loop() {
 luup() {
   while sleep 1; do eval "$@" && return; done
 }
+
+# kubectl bash completion
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+source <(kubectl completion bash)
+
 
 # Remove all colour attributes with 00m
 NORMAL="\[\033[00m\]"
