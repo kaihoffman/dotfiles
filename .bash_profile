@@ -62,6 +62,8 @@ alias ll="ls -Glh"
 alias find="fd"
 alias remindMe="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 
+alias kc="kubectl"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kai/google-cloud-sdk/path.bash.inc' ]; then . '/Users/kai/google-cloud-sdk/path.bash.inc'; fi
 
