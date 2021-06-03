@@ -10,7 +10,6 @@ bdw-gc
 c-ares
 cairo
 checkov
-civo
 coreutils
 dav1d
 docbook
@@ -71,13 +70,10 @@ little-cms2
 lzo
 mc
 mysql
-nb
 ncurses
 nettle
 nghttp2
 nmap
-octant
-okteto
 opencore-amr
 openjpeg
 openssl@1.1
@@ -120,7 +116,6 @@ v8
 w3m
 webp
 wget
-wtfutil
 x264
 x265
 xmlto
