@@ -1,33 +1,75 @@
 {
-    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 15,
-    "editor.lineHeight": 25,
-    "editor.letterSpacing": 0.1,
-    "files.trimTrailingWhitespace": true,
-    "editor.fontWeight": "200",
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 3,
-    "editor.renderWhitespace": "boundary",
-    "gitlens.views.repositories.location": "scm",
-    "gitlens.views.fileHistory.location": "explorer",
-    "gitlens.views.lineHistory.location": "explorer",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
+    "workbench.colorTheme": "Solarized Light",
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path.mac": "/Users/kai/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vscode-kubernetes.kubectl-path.mac": "/Users/kai/.vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.helm-path.mac": "/Users/kai/.vs-kubernetes/tools/helm/darwin-amd64/helm"
+    },
     "git.autofetch": true,
-    "workbench.tree.indent": 13,
-    "gitlens.views.repositories.files.layout": "list",
-    "window.zoomLevel": 0,
+    "editor.fontSize": 15,
     "editor.tabSize": 2,
-    "editor.rulers": [
-        80
-    ],
-    "better-comments.highlightPlainText": true,
-    "go.formatTool": "goimports",
-    "telemetry.enableTelemetry": false,
-    "gitlens.advanced.telemetry.enabled": false,
-    "telemetry.enableCrashReporter": false,
-    "go.useLanguageServer": true,
-    "editor.minimap.size": "fill",
-    "workbench.colorTheme": "Quiet Light",
-    "files.insertFinalNewline": true
+    "redhat.telemetry.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace",
+    "editor.cursorWidth": 2,
+    "diffEditor.codeLens": true,
+    "auto.languages": {
+    
+        "ruby": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "elixir": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "javascript": {
+            "symbol": "$",
+            "stringWrapper": "`"
+        },
+        "vue": {
+            "symbol": "$",
+            "stringWrapper": "`"
+        },
+        "javascriptreact": {
+            "symbol": "$",
+            "stringWrapper": "`"
+        },
+        "typescript": {
+            "symbol": "$",
+            "stringWrapper": "`"
+        },
+        "typescriptreact": {
+            "symbol": "$",
+            "stringWrapper": "`"
+        },
+        "coffeescript": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "erb": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "haml": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "slim": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "groovy": {
+            "symbol": "$",
+            "stringWrapper": "\""
+        },
+        "crystal": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        },
+        "ecr": {
+            "symbol": "#",
+            "stringWrapper": "\""
+        }
+    }
 }
