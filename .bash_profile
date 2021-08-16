@@ -1,8 +1,6 @@
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 GIT_SYMBOL=$'\xE2\x8E\x87 '
@@ -64,8 +62,11 @@ alias remindMe="git for-each-ref --sort=committerdate refs/heads/ --format='%(HE
 
 alias kc="kubectl"
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kai/google-cloud-sdk/path.bash.inc' ]; then . '/Users/kai/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/path.bash.inc' ]; then . '/Users/kai/Downloads/google-cloud-sdk-2/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kai/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/kai/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc' ]; then . '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc'; fi

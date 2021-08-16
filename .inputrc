@@ -3,11 +3,6 @@ set completion-ignore-case on
 # List all matches in case multiple possible completions are possible
 set show-all-if-ambiguous on
 # Flip through autocompletion matches with Shift-Tab.
-bind '"\e[Z": menu-complete'
+# bind '"\e[Z": menu-complete'
 set colored-stats on
 
-# Incremental history searching with up and down arrows (credit: https://codeinthehole.com/tips/the-most-important-command-line-tip-incremental-history-searching-with-inputrc/)
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-bind '"\e[C": forward-char'
-bind '"\e[D": backward-char'
