@@ -52,7 +52,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 HISTFILESIZE=1000000
 HISTSIZE=100000
-HISTIGNORE="ls:ps:cd:history:top:htop"
+HISTIGNORE="ls:ps:cd:history:top:htop:clear:exit:pwd"
 HISTCONTROL=ignoreboth:erasedups
 
 alias ls="ls -F"
@@ -70,3 +70,6 @@ if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/path.bash.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc' ]; then . '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc'; fi
+
+# Add Krew path to allow kubectl krew commands to work
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
