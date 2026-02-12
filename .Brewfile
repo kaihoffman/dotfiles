@@ -12,8 +12,12 @@ brew "rbenv"
 brew "thefuck"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# GIT client
+cask "fork"
 # System monitor for the menu bar
 cask "stats"
+# Dual-panel file manager inspired by Total Commander
+cask "thecommander"
 vscode "aaron-bond.better-comments"
 vscode "aliariff.auto-add-brackets"
 vscode "armandphilippot.coldark"
