@@ -6,3 +6,5 @@ function window_title {
 # Add Krew binary path to PATH to make sure it works as intended
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
