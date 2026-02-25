@@ -98,9 +98,3 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-
-# Use `window_title xyz` to show a custom tab title
-function window_title {
-    echo -ne "\033]0;"$*"\007"
-}
-
