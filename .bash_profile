@@ -1,5 +1,5 @@
 
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "$HOME/.profile" ]] && . "$HOME/.profile" # Load the default .profile
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
@@ -57,7 +57,7 @@ BLUE="\[\033[01;34m\]"
 YELLOW="\[\e[1;33m\]"
 GREEN="\[\e[1;32m\]"
 
-PROMPT_DIRTRIM=2
+PROMPT_DIRTRIM=2 # only show the last 2 directories in prompt
 export PS1='[\A]\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)$(get_kubernetes_context)$ '
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -77,23 +77,14 @@ alias remindMe="git for-each-ref --sort=committerdate refs/heads/ --format='%(HE
 
 alias kc="kubectl"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # Add Krew path to allow kubectl krew commands to work
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/path.bash.inc' ]; then . '/Users/kai/Downloads/google-cloud-sdk-2/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc' ]; then . '/Users/kai/Downloads/google-cloud-sdk-2/completion.bash.inc'; fi
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 # Added by Windsurf
 export PATH="/Users/kai/.codeium/windsurf/bin:$PATH"
-
-# Add Krew binary path to PATH to make sure it works as intended
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
