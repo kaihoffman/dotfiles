@@ -1,10 +1,15 @@
 # This is Git's per-user configuration file.
 [user]
-	email = kai@civo.com
+	email = 44998809+kaihoffman@users.noreply.github.com
 	name = Kai
+
+[core]
+	 # Play nice with Windows devs and their carriage returns
+	autocrlf = input
 
 [alias]
 	cm = !git add -A && git commit -m
+	 # Play nice with Windows devs and their carriage returns
 	co = checkout
 	
 	#When starting new work, pull in and clean.
@@ -23,5 +28,14 @@
 	# Pretty log graph aliases as per https://stackoverflow.com/a/9074343/11825722
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
 [pull]
-	rebase = false
+	# Default to rebase on pull of a branch
+	rebase = true
+
+[push]
+	# Only push the current branch
+	default = simple
+
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
