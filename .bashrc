@@ -13,8 +13,18 @@ if has kubectl; then
   source <(kubectl completion bash)
   complete -o default -F __start_kubectl kc
 fi
-# swamp shell completions (https://swamp.club)
-has swamp && source <(swamp completions bash)
+
+# swamp shell completions (https://swamp.club). Generating them takes ~1s, so cache the
+# output and only regenerate when the swamp binary is newer than the cache.
+if has swamp; then
+  swamp_completions="${XDG_CACHE_HOME:-$HOME/.cache}/swamp-completions.bash"
+  if [[ ! -s "$swamp_completions" || "$(command -v swamp)" -nt "$swamp_completions" ]]; then
+    mkdir -p "${swamp_completions%/*}"
+    swamp completions bash 2>/dev/null > "$swamp_completions"
+  fi
+  source "$swamp_completions"
+  unset swamp_completions
+fi
 
 # Add thefuck typo fixing
 has thefuck && eval "$(thefuck --alias)"
