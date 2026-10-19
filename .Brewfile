@@ -1,11 +1,19 @@
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# RSS reader for the terminal
+brew "nom"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Ruby version manager
 brew "rbenv"
 # Programmatically correct mistyped console commands
@@ -29,6 +37,10 @@ vscode "ikuyadeu.lucario"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "oderwat.indent-rainbow"
 vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
